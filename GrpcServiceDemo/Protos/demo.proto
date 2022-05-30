@@ -2,3 +2,20 @@ syntax = "proto3";
 
 option csharp_namespace = "NETGrpcServiceDemo.Protos";
 
+package demo;
+
+// The greeting service definition.
+service Demo {
+  // Sends a greeting
+  rpc DemoRPC (DemoRequest) returns (DemoResponse);
+}
+
+// The request message containing the user's name.
+message DemoRequest {
+  int64 desiredResults = 1;
+}
+
+// The response message containing the greetings.
+message DemoResponse {
+  string demoList = 1;
+}
